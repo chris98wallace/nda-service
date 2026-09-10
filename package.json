@@ -1,0 +1,23 @@
+{
+  "name": "nda-service",
+  "version": "0.1.0",
+  "description": "Build an NDA or noncompete, text a signing link, get it signed.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "pdfkit": "^0.15.0",
+    "twilio": "^5.2.2",
+    "uuid": "^9.0.1"
+  }
+}
