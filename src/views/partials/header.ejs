@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= typeof pageTitle !== 'undefined' ? pageTitle : 'NDA Service' %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<nav class="nav">
+  <a class="brand" href="/">NDA Service</a>
+  <div class="nav-links">
+    <% if (typeof currentUser !== 'undefined' && currentUser) { %>
+      <span class="muted"><%= currentUser.business_name %></span>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/documents/new">New document</a>
+      <form action="/logout" method="POST" style="display:inline">
+        <button type="submit" class="btn secondary" style="padding:6px 12px;font-size:13px;">Log out</button>
+      </form>
+    <% } else { %>
+      <a href="/login">Log in</a>
+      <a href="/signup" class="btn" style="padding:6px 14px;">Sign up</a>
+    <% } %>
+  </div>
+</nav>
