@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+<div class="container">
+  <div class="card">
+    <h1>Create your account</h1>
+    <p class="lead">This is who documents are sent "from."</p>
+    <% if (error) { %><div class="error-box"><%= error %></div><% } %>
+    <form method="POST" action="/signup">
+      <label>Business / your name <span class="req">*</span></label>
+      <input type="text" name="business_name" required>
+      <label>Email <span class="req">*</span></label>
+      <input type="email" name="email" required>
+      <label>Password <span class="req">*</span></label>
+      <input type="password" name="password" required minlength="6">
+      <label>Your phone <span class="hint">(optional)</span></label>
+      <input type="tel" name="phone">
+      <button type="submit" class="btn block mt-24">Create account</button>
+    </form>
+    <p class="muted mt-24">Already have an account? <a href="/login">Log in</a></p>
+  </div>
+</div>
+<%- include('partials/footer') %>
