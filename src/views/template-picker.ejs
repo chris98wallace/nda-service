@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="container wide">
+  <h1>Choose a template</h1>
+  <p class="lead">Pick a starting point, then fill in the details for this specific document.</p>
+  <div class="disclaimer">Not legal advice. Noncompete enforceability varies a lot by state — some states restrict or void them almost entirely.</div>
+
+  <div class="template-grid">
+    <% templates.forEach(function(t) { %>
+      <a class="template-card" href="/documents/new/<%= t.id %>">
+        <div class="template-type"><%= t.type %></div>
+        <h3><%= t.name %></h3>
+        <p><%= t.description %></p>
+      </a>
+    <% }); %>
+  </div>
+</div>
+<%- include('partials/footer') %>
